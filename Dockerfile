@@ -33,4 +33,5 @@ RUN mkdir -p $CONDA_DIR && \
     curl https://repo.continuum.io/miniconda/Miniconda3-${CONDA_VER}-Linux-x86_64.sh  -o mconda.sh && \
     /bin/bash mconda.sh -f -b -p $CONDA_DIR && \
     rm mconda.sh && \
-    $CONDA_DIR/bin/conda install --yes conda==${CONDA_VER}
+    $CONDA_DIR/bin/conda install --yes conda==${CONDA_VER} && \
+    conda clean --all --yes
