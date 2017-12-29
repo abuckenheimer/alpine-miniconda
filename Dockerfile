@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.7
 
 MAINTAINER CognitiveScale <devops@cognitivescale.com>
 
@@ -14,7 +14,7 @@ RUN apk --update  --repository http://dl-4.alpinelinux.org/alpine/edge/community
     glib \
     libxext \
     libxrender \
-    tini \ 
+    tini \
     && curl -L "https://github.com/andyshinn/alpine-pkg-glibc/releases/download/2.25-r0/glibc-2.25-r0.apk" -o /tmp/glibc.apk \
     && curl -L "https://github.com/andyshinn/alpine-pkg-glibc/releases/download/2.25-r0/glibc-bin-2.25-r0.apk" -o /tmp/glibc-bin.apk \
     && curl -L "https://github.com/andyshinn/alpine-pkg-glibc/releases/download/2.25-r0/glibc-i18n-2.25-r0.apk" -o /tmp/glibc-i18n.apk \
@@ -24,7 +24,7 @@ RUN apk --update  --repository http://dl-4.alpinelinux.org/alpine/edge/community
     && rm -rf /tmp/glibc*apk /var/cache/apk/*
 
 # Configure environment
-ENV CONDA_DIR=/opt/conda CONDA_VER=4.3.14
+ENV CONDA_DIR=/opt/conda CONDA_VER=4.3.31
 ENV PATH=$CONDA_DIR/bin:$PATH SHELL=/bin/bash LANG=C.UTF-8
 
 # Install conda
