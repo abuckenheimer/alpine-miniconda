@@ -24,7 +24,7 @@ RUN apk --update  --repository http://dl-4.alpinelinux.org/alpine/edge/community
     && rm -rf /tmp/glibc*apk /var/cache/apk/*
 
 # Configure environment
-ENV CONDA_DIR=/opt/conda CONDA_VER=4.3.31
+ENV CONDA_DIR=/opt/conda CONDA_VER=4.5.11
 ENV PATH=$CONDA_DIR/bin:$PATH SHELL=/bin/bash LANG=C.UTF-8
 
 # Install conda
